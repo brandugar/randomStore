@@ -21,9 +21,9 @@ random.addEventListener("click", () => {
     setTimeout(() => {
         modal.querySelector('.card')?.remove();
         var random = Math.floor(Math.random() * 38);
-        modal.querySelector('div.centralCard');
+        // modal.querySelector('div.centralCard');
         modal.classList.toggle("inactive");
-        modal.appendChild(cards[random].cloneNode(true));
+        modal.querySelector('div.centralCard').appendChild(cards[random].cloneNode(true));
 
         cards.forEach((card) => {
             card.style.order = Math.floor(Math.random() * 12);
